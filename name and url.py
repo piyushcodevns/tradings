@@ -1,12 +1,12 @@
 import pickle
-name = input("Enter stock name: ")
-url = input("Enter stock url: ")
+name=input("Enter company name: ")
+url=input("Enter company url: ")
 try:
-    with open("share.dat", "rb") as f:
-        stock = pickle.load(f)
+    with open("share.data","rb") as f:
+        stocks=pickle.load(f)
 except:
-    stock = {}
-stock[name] = url
-with open("share.dat", "wb") as f:
-    pickle.dump(stock, f)
+    stocks={}
+stocks[name]=url
+with open("share.data","wb") as f:
+    pickle.dump(stocks,f)
 print("Saved successfully")

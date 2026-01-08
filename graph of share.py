@@ -15,13 +15,19 @@ for tr in trs:
         y.append(float(price))
     except:
         pass
+    
 # X AXIS
+
 x = list(range(len(y)))
 x.reverse()
-# AVERAGE LINE   
+
+# AVERAGE LINE 
+  
 avgy = sum(y) / len(y)
 starty = [y[-1] for i in range(len(y))]
+
 # COLOR LOGIC
+
 if y[-1] > y[0]:
     color = "red"
 elif y[-1] < y[0]:

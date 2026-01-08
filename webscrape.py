@@ -3,16 +3,16 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-with open("share.dat", "rb") as f:
-    stocks=pickle.load(f)
-    stockname=input("Enter the stock name: ")
-    url=stocks[stockname]
-    driver=webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+with open("share.data", "rb") as f:
+    stocks = pickle.load(f)
+    stockname = input("Enter the company name: ")
+    url = stocks[stockname]
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.get(url)
-    data=driver.page_source
-    datafile=open("company.txt","wb+")
-    pickle.dump(data,datafile)
+    data = driver.page_source
+    datafile = open("company.txt", "rb+")
+    pickle.dump(data, datafile)
     datafile.flush()
     datafile.close()
-    driver.quit()
     print(data)
+    driver.quit()
