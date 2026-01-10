@@ -1,7 +1,9 @@
 import pickle
 from bs4 import BeautifulSoup
 import matplotlib.pyplot as plt
+
 # DATA LOAD
+
 file = open("company.txt", "rb+")
 data = pickle.load(file)
 file.close()
@@ -34,7 +36,9 @@ elif y[-1] < y[0]:
     color = "green"
 else:
     color = "yellow"
+    
 # PLOT
+
 plt.plot(x, y, color=color)
 plt.plot(x, starty, color="blue",linestyle="-.")
 plt.xlabel("Date")
