@@ -17,15 +17,14 @@ for tr in trs:
         y.append(float(price))
     except:
         pass
-
-
+    
 # X AXIS
 
 x = list(range(len(y)))
 x.reverse()
 
-# AVERAGE LINE
-
+# AVERAGE LINE 
+  
 avgy = sum(y) / len(y)
 starty = [y[-1] for i in range(len(y))]
 
@@ -37,9 +36,12 @@ elif y[-1] < y[0]:
     color = "green"
 else:
     color = "yellow"
-
+    
 # PLOT
 
 plt.plot(x, y, color=color)
-plt.plot(x, starty, color="blue", linestyle="-.")
+plt.plot(x, starty, color="blue",linestyle="-.")
 plt.xlabel("Date")
+plt.ylabel("Closing Price")
+plt.title("Stock Prices Over Time")
+plt.show()
