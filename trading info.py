@@ -33,6 +33,7 @@ print("Total cost of shares:", total_cost)
 trade = {
     "user": username,
     "company": company,
+    "per share price": buy_price,
     "quantity": quantity,
     "buy_price": buy_price,
 }

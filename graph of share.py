@@ -31,6 +31,7 @@ if y[-1] > y[0]:
 elif y[-1] < y[0]:
     color = "green"
 else:
+    
     color = "yellow"
     
 # PLOT
